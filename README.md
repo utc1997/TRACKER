@@ -1,2 +1,2 @@
 # TRACKER
-expense traker
+expense tracker
