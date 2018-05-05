@@ -10,39 +10,9 @@ package expenses.pojo;
  * @author Maraxys
  */
 public class UserInfo {
-    private String userId;
+   
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
+   
     
     public UserInfo(){
         
@@ -59,6 +29,40 @@ public class UserInfo {
         System.out.println("from const: "+this.userId+this.name+this.gender);
     }
     
+    
+
+    public static String getUserId() {
+        return userId;
+    }
+
+    public static void setUserId(String userId) {
+        UserInfo.userId = userId;
+    }
+
+    public static String getName() {
+        return name;
+    }
+
+    public static void setName(String name) {
+        UserInfo.name = name;
+    }
+
+    public static String getGender() {
+        return gender;
+    }
+
+    public static void setGender(String gender) {
+        UserInfo.gender = gender;
+    }
+
+    public static int getAge() {
+        return age;
+    }
+
+    public static void setAge(int age) {
+        UserInfo.age = age;
+    }
+    private static String userId;
     private static String name;
     private static String gender;
     private static int age;
