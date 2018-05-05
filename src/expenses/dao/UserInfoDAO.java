@@ -18,7 +18,17 @@ import java.sql.SQLException;
  */
 public class UserInfoDAO {
     
+    /**
+     *
+     */
     public static Connection conn;
+
+    /**
+     *
+     * @param uname
+     * @return
+     * @throws SQLException
+     */
     public static boolean userNameExists(String uname) throws SQLException {
         conn=DBConnExp.getConnection();
         PreparedStatement ps=conn.prepareStatement("select * from user_info where name=?");
@@ -32,6 +42,12 @@ public class UserInfoDAO {
         }
     }
     
+    /**
+     *
+     * @param ui
+     * @return
+     * @throws SQLException
+     */
     public static boolean addUserInfo(UserInfo ui) throws SQLException{
         conn=DBConnExp.getConnection();
         PreparedStatement ps=conn.prepareStatement("insert into user_info values(?,?,?,?)");

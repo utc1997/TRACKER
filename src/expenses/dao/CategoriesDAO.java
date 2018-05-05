@@ -18,6 +18,12 @@ import java.sql.SQLException;
  */
 public class CategoriesDAO {
 
+    /**
+     *
+     * @param uid
+     * @param budget
+     * @throws SQLException
+     */
     public static void addToCat(String uid, int budget) throws SQLException {
         Connection conn = DBConnExp.getConnection();
 
@@ -27,6 +33,14 @@ public class CategoriesDAO {
         ps.executeUpdate();
     }
 
+    /**
+     *
+     * @param uid
+     * @param cat
+     * @param amt
+     * @return
+     * @throws SQLException
+     */
     public static boolean addCategoryExpense(String uid, String cat, int amt) throws SQLException {
 
         Connection conn = DBConnExp.getConnection();
@@ -43,6 +57,12 @@ public class CategoriesDAO {
 
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     * @throws SQLException
+     */
     public static Categories getCatwiseExpense(String username) throws SQLException {
         Connection conn = DBConnExp.getConnection();
         String qry = "select * from CATWISE_EXPENSE where USER_ID=?";
@@ -73,7 +93,14 @@ public class CategoriesDAO {
         return catwise;
     }
 
-
+    /**
+     *
+     * @param uid
+     * @param oldCat
+     * @param oldAmt
+     * @return
+     * @throws SQLException
+     */
     public static boolean removeOldCatwise(String uid, String oldCat, int oldAmt) throws SQLException {
         Connection conn=DBConnExp.getConnection();
         String query = "Update CATWISE_EXPENSE set " + oldCat + " = " + oldCat + "- ? where USER_ID= ?";
@@ -85,6 +112,14 @@ public class CategoriesDAO {
         return (a > 0);
     }
 
+    /**
+     *
+     * @param uid
+     * @param newCat
+     * @param newAmt
+     * @return
+     * @throws SQLException
+     */
     public static boolean addNewCatwise(String uid, String newCat, int newAmt) throws SQLException {
         Connection conn=DBConnExp.getConnection();
         String query = "Update CATWISE_EXPENSE set " + newCat + " = " + newCat + "+ ? where USER_ID= ?";

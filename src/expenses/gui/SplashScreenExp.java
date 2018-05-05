@@ -5,9 +5,9 @@
  */
 package expenses.gui;
 
-import java.awt.Color;
-import javax.swing.JOptionPane;
-import javax.swing.JProgressBar;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -22,6 +22,12 @@ public class SplashScreenExp extends javax.swing.JFrame {
         initComponents();
         super.setLocationRelativeTo(null);
         
+      //  GIFL.setIcon(new ImageIcon(""));
+        //ImageIcon icon = new ImageIcon(getClass().getResource("Untitled-1.gif"));
+        //Image img= icon.getImage().getScaledInstance(100,100,Image.SCALE_SMOOTH);
+        
+        //JLabel label = new JLabel(new ImageIcon(img));
+        //jPanel2.add(label);
         //SplashThread sp = new SplashThread();
         //sp.start();
 
@@ -38,7 +44,7 @@ public class SplashScreenExp extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         progressBar = new javax.swing.JProgressBar();
-        jLabel1 = new javax.swing.JLabel();
+        GIFL = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -49,26 +55,25 @@ public class SplashScreenExp extends javax.swing.JFrame {
         progressBar.setBackground(new java.awt.Color(255, 255, 255));
         progressBar.setForeground(new java.awt.Color(51, 51, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Wallet Image.png"))); // NOI18N
+        GIFL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/gif.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, 958, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(228, 228, 228)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, 851, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(GIFL)
+                .addGap(99, 99, 99))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(GIFL, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -121,7 +126,7 @@ public class SplashScreenExp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel GIFL;
     public javax.swing.JPanel jPanel2;
     public javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables

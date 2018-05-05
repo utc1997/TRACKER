@@ -51,22 +51,31 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         panelHealth = new javax.swing.JPanel();
         lblHealth = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         panelBills = new javax.swing.JPanel();
         lblBills = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         panelEdu = new javax.swing.JPanel();
         lblEducation = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         panelGrocery = new javax.swing.JPanel();
         lblGrocery = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         panelTravel = new javax.swing.JPanel();
         lblTravel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         panelEntertain = new javax.swing.JPanel();
         lblEnt = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         panelShopping = new javax.swing.JPanel();
         lblShopping = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         panelOthers = new javax.swing.JPanel();
         lblOthers = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         panelEatout = new javax.swing.JPanel();
         lblEatout = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -105,21 +114,28 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblHealth.setForeground(new java.awt.Color(255, 255, 255));
         lblHealth.setText("Health");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Health.png"))); // NOI18N
+
         javax.swing.GroupLayout panelHealthLayout = new javax.swing.GroupLayout(panelHealth);
         panelHealth.setLayout(panelHealthLayout);
         panelHealthLayout.setHorizontalGroup(
             panelHealthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelHealthLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(panelHealthLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
                 .addComponent(lblHealth)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelHealthLayout.setVerticalGroup(
             panelHealthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHealthLayout.createSequentialGroup()
-                .addContainerGap(124, Short.MAX_VALUE)
-                .addComponent(lblHealth)
-                .addGap(25, 25, 25))
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(lblHealth))
         );
 
         panelBills.setBackground(new java.awt.Color(0, 0, 204));
@@ -136,21 +152,28 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblBills.setForeground(new java.awt.Color(255, 255, 255));
         lblBills.setText("Bills");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Bills.png"))); // NOI18N
+
         javax.swing.GroupLayout panelBillsLayout = new javax.swing.GroupLayout(panelBills);
         panelBills.setLayout(panelBillsLayout);
         panelBillsLayout.setHorizontalGroup(
             panelBillsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBillsLayout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(42, 42, 42))
+            .addGroup(panelBillsLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
                 .addComponent(lblBills)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBillsLayout.setVerticalGroup(
             panelBillsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBillsLayout.createSequentialGroup()
-                .addContainerGap(126, Short.MAX_VALUE)
-                .addComponent(lblBills)
-                .addGap(23, 23, 23))
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblBills))
         );
 
         panelEdu.setBackground(new java.awt.Color(0, 0, 204));
@@ -167,21 +190,29 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblEducation.setForeground(new java.awt.Color(255, 255, 255));
         lblEducation.setText("Education");
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Education.png"))); // NOI18N
+
         javax.swing.GroupLayout panelEduLayout = new javax.swing.GroupLayout(panelEdu);
         panelEdu.setLayout(panelEduLayout);
         panelEduLayout.setHorizontalGroup(
             panelEduLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEduLayout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblEducation)
-                .addGap(42, 42, 42))
+                .addGap(44, 44, 44))
+            .addGroup(panelEduLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                .addContainerGap())
         );
         panelEduLayout.setVerticalGroup(
             panelEduLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEduLayout.createSequentialGroup()
-                .addContainerGap(115, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblEducation)
-                .addGap(34, 34, 34))
+                .addContainerGap())
         );
 
         panelGrocery.setBackground(new java.awt.Color(0, 0, 204));
@@ -198,21 +229,28 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblGrocery.setForeground(new java.awt.Color(255, 255, 255));
         lblGrocery.setText("Grocery");
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Groccery.png"))); // NOI18N
+
         javax.swing.GroupLayout panelGroceryLayout = new javax.swing.GroupLayout(panelGrocery);
         panelGrocery.setLayout(panelGroceryLayout);
         panelGroceryLayout.setHorizontalGroup(
             panelGroceryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelGroceryLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addContainerGap())
             .addGroup(panelGroceryLayout.createSequentialGroup()
-                .addGap(55, 55, 55)
+                .addGap(54, 54, 54)
                 .addComponent(lblGrocery)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelGroceryLayout.setVerticalGroup(
             panelGroceryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelGroceryLayout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
-                .addComponent(lblGrocery)
-                .addGap(38, 38, 38))
+                .addGap(19, 19, 19)
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblGrocery))
         );
 
         panelTravel.setBackground(new java.awt.Color(0, 0, 204));
@@ -229,21 +267,29 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblTravel.setForeground(new java.awt.Color(255, 255, 255));
         lblTravel.setText("Travel");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/travel.png"))); // NOI18N
+
         javax.swing.GroupLayout panelTravelLayout = new javax.swing.GroupLayout(panelTravel);
         panelTravel.setLayout(panelTravelLayout);
         panelTravelLayout.setHorizontalGroup(
             panelTravelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTravelLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(lblTravel)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addGroup(panelTravelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelTravelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2))
+                    .addGroup(panelTravelLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(lblTravel)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         panelTravelLayout.setVerticalGroup(
             panelTravelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTravelLayout.createSequentialGroup()
-                .addContainerGap(125, Short.MAX_VALUE)
-                .addComponent(lblTravel)
-                .addGap(24, 24, 24))
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(22, 22, 22)
+                .addComponent(lblTravel))
         );
 
         panelEntertain.setBackground(new java.awt.Color(0, 0, 204));
@@ -260,21 +306,28 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblEnt.setForeground(new java.awt.Color(255, 255, 255));
         lblEnt.setText("Entertainment");
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Entertainment.png"))); // NOI18N
+
         javax.swing.GroupLayout panelEntertainLayout = new javax.swing.GroupLayout(panelEntertain);
         panelEntertain.setLayout(panelEntertainLayout);
         panelEntertainLayout.setHorizontalGroup(
             panelEntertainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEntertainLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+            .addGroup(panelEntertainLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(lblEnt)
-                .addGap(21, 21, 21))
+                .addGap(26, 26, 26))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEntertainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         panelEntertainLayout.setVerticalGroup(
             panelEntertainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEntertainLayout.createSequentialGroup()
-                .addContainerGap(119, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblEnt)
-                .addGap(30, 30, 30))
+                .addContainerGap())
         );
 
         panelShopping.setBackground(new java.awt.Color(0, 0, 204));
@@ -291,21 +344,37 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblShopping.setForeground(new java.awt.Color(255, 255, 255));
         lblShopping.setText("Shopping");
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/shopping.png"))); // NOI18N
+        jLabel1.setToolTipText("");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelShoppingLayout = new javax.swing.GroupLayout(panelShopping);
         panelShopping.setLayout(panelShoppingLayout);
         panelShoppingLayout.setHorizontalGroup(
             panelShoppingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelShoppingLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(lblShopping)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addGroup(panelShoppingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelShoppingLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(lblShopping))
+                    .addGroup(panelShoppingLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         panelShoppingLayout.setVerticalGroup(
             panelShoppingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelShoppingLayout.createSequentialGroup()
-                .addContainerGap(124, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblShopping)
-                .addGap(25, 25, 25))
+                .addGap(20, 20, 20))
         );
 
         panelOthers.setBackground(new java.awt.Color(0, 0, 204));
@@ -322,21 +391,29 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblOthers.setForeground(new java.awt.Color(255, 255, 255));
         lblOthers.setText("Other");
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Other.png"))); // NOI18N
+
         javax.swing.GroupLayout panelOthersLayout = new javax.swing.GroupLayout(panelOthers);
         panelOthers.setLayout(panelOthersLayout);
         panelOthersLayout.setHorizontalGroup(
             panelOthersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelOthersLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
-                .addComponent(lblOthers)
-                .addGap(58, 58, 58))
+            .addGroup(panelOthersLayout.createSequentialGroup()
+                .addGroup(panelOthersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelOthersLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel9))
+                    .addGroup(panelOthersLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(lblOthers)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         panelOthersLayout.setVerticalGroup(
             panelOthersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelOthersLayout.createSequentialGroup()
-                .addContainerGap(114, Short.MAX_VALUE)
-                .addComponent(lblOthers)
-                .addGap(35, 35, 35))
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
+                .addComponent(lblOthers))
         );
 
         panelEatout.setBackground(new java.awt.Color(0, 0, 204));
@@ -353,21 +430,28 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         lblEatout.setForeground(new java.awt.Color(255, 255, 255));
         lblEatout.setText("Eatout");
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/Eatout.png"))); // NOI18N
+
         javax.swing.GroupLayout panelEatoutLayout = new javax.swing.GroupLayout(panelEatout);
         panelEatout.setLayout(panelEatoutLayout);
         panelEatoutLayout.setHorizontalGroup(
             panelEatoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelEatoutLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(panelEatoutLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
                 .addComponent(lblEatout)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelEatoutLayout.setVerticalGroup(
             panelEatoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEatoutLayout.createSequentialGroup()
-                .addContainerGap(121, Short.MAX_VALUE)
-                .addComponent(lblEatout)
-                .addGap(28, 28, 28))
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblEatout))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -406,12 +490,12 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
                     .addComponent(panelEntertain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelHealth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelEatout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
+                .addGap(59, 59, 59)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelOthers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelGrocery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelEdu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 730));
@@ -481,6 +565,13 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
         openCalculator();
     }//GEN-LAST:event_panelOthersMouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        cCat=lblShopping.getText();
+        System.out.println(lblShopping.getText());
+        openCalculator(); 
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -517,6 +608,15 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JLabel lblBills;

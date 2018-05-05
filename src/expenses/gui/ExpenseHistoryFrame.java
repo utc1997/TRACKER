@@ -26,13 +26,14 @@ import javax.swing.table.TableRowSorter;
 public class ExpenseHistoryFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form ExpenseHistoryFrame
+     * Creates new form ExpenseHistoryFrame]
      */
     String eTxnId,eCat,eAmt,eDesc,descBox;
     Date eDate;
     public ExpenseHistoryFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        
         jtSelfExpense.setRowSorter(new TableRowSorter(jtSelfExpense.getModel()) {
     @Override
         public boolean isSortable(int column) {

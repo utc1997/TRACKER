@@ -21,6 +21,11 @@ import java.util.Date;
  */
 public class SelfHistoryDAO {
 
+    /**
+     *
+     * @return
+     * @throws SQLException
+     */
     public static String getTxnId() throws SQLException {
 
         Connection conn = DBConnExp.getConnection();
@@ -38,6 +43,12 @@ public class SelfHistoryDAO {
         return newId;
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     * @throws SQLException
+     */
     public static boolean createTransaction(SelfHistory obj) throws SQLException {
 
         Connection conn = DBConnExp.getConnection();
@@ -55,7 +66,12 @@ public class SelfHistoryDAO {
 
     }
 
-
+    /**
+     *
+     * @param username
+     * @return
+     * @throws SQLException
+     */
     public static ArrayList<SelfHistory> getExpenses(String username) throws SQLException {
         Connection conn = DBConnExp.getConnection();
         ArrayList<SelfHistory> selfTxHistory = new ArrayList<>();
@@ -82,6 +98,12 @@ public class SelfHistoryDAO {
         
     }
 
+    /**
+     *
+     * @param obj
+     * @return
+     * @throws SQLException
+     */
     public static boolean updateSelfTx(SelfHistory obj) throws SQLException {
         Connection conn=DBConnExp.getConnection();
         PreparedStatement ps=conn.prepareStatement("update SELF_HISTORY set AMOUNT=?, TX_DATE=?, CATEGORY=?, DESCRIPTION=? where TXN_ID=? and USER_ID=?");

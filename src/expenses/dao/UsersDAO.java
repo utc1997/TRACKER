@@ -17,8 +17,18 @@ import java.sql.SQLException;
  * @author Maraxys
  */
 public class UsersDAO {
+
+    /**
+     *
+     */
     public static Connection conn;
     
+    /**
+     *
+     * @param u
+     * @return
+     * @throws SQLException
+     */
     public static boolean ValidateUserLogin(Users u) throws SQLException {
         conn=DBConnExp.getConnection();
         PreparedStatement ps=conn.prepareStatement("select * from users where user_id=? and password=?");    
@@ -36,6 +46,12 @@ public class UsersDAO {
     
     }
     
+    /**
+     *
+     * @param uid
+     * @return
+     * @throws SQLException
+     */
     public static boolean userIdExists(String uid) throws SQLException {
         conn=DBConnExp.getConnection();
         PreparedStatement ps=conn.prepareStatement("select * from users where user_id=?");
@@ -49,6 +65,12 @@ public class UsersDAO {
         }
     }
     
+    /**
+     *
+     * @param u
+     * @return
+     * @throws SQLException
+     */
     public static boolean addUsers(Users u) throws SQLException {
         Connection conn=DBConnExp.getConnection();
         

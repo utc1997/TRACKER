@@ -18,7 +18,7 @@ public class SplashCaller {
         
         try{
             for(int i=0;i<=100;i++){
-            Thread.sleep(40);
+            Thread.sleep(35);
             sp.progressBar.setValue(i);
             sp.progressBar.setBackground(Color.white);
             }
