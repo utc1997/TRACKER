@@ -63,4 +63,31 @@ public class UserInfoDAO {
             return true;
         }
     }
+    
+     /**
+     *
+     * @param uname
+     * @throws SQLException
+     */
+    public static void getUserInfo(String uname) throws SQLException {
+        conn=DBConnExp.getConnection();
+        PreparedStatement ps=conn.prepareStatement("select * from user_info where name=?");
+            ps.setString(1,uname);
+        ResultSet rs=ps.executeQuery();
+        UserInfo uinfo=null;
+        if(rs.next()){
+            
+            
+            String UID = rs.getString("USER_ID");
+            String gender = rs.getString("GENDER");
+            int age = rs.getInt("AGE");
+            System.out.println(UID+gender+age);
+           uinfo =new UserInfo(UID,uname,gender,age);
+            //return uinfo;
+        }
+    //return uinfo;
+    }
+    
+    
+    
 }

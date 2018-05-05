@@ -8,6 +8,7 @@ package expenses.gui;
 import expenses.dao.CategoriesDAO;
 import expenses.pojo.Categories;
 import expenses.pojo.GlobalData;
+import expenses.pojo.UserInfo;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -34,6 +35,10 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
     public PersonalExpenseFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        
+        UserInfo uinfo=new UserInfo();
+        System.out.println(uinfo.getName());
+        jTxt.setText(uinfo.getName());
 
         try {
             catwise=CategoriesDAO.getCatwiseExpense(GlobalData.getUsername());
@@ -64,6 +69,8 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         btnTxHistory = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jTxt = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         lblBack = new javax.swing.JLabel();
 
@@ -152,15 +159,37 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(48, 48, 48));
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        jTxt.setText(" ");
+        jTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 198, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 638, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addComponent(jTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(246, 246, 246))
         );
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 200, 640));
@@ -228,6 +257,10 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lblLogoutMouseClicked
 
+    private void jTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -270,12 +303,14 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
     private javax.swing.JInternalFrame InternalFrame;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnTxHistory;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JTextField jTxt;
     private javax.swing.JLabel lblBack;
     private javax.swing.JLabel lblLogout;
     // End of variables declaration//GEN-END:variables

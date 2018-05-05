@@ -5,6 +5,7 @@
  */
 package expenses.gui;
 
+import expenses.pojo.UserInfo;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +20,9 @@ public class UserDashboardFrame extends javax.swing.JFrame {
     public UserDashboardFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        UserInfo uinfo=new UserInfo();
+        System.out.println(uinfo.getName());
+        jTxt.setText(uinfo.getName());
     }
 
     /**
@@ -35,6 +39,7 @@ public class UserDashboardFrame extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         lblLogout = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jTxt = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -100,15 +105,30 @@ public class UserDashboardFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(48, 48, 48));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        jTxt.setEditable(false);
+        jTxt.setBackground(new java.awt.Color(0, 0, 0));
+        jTxt.setForeground(new java.awt.Color(255, 255, 255));
+        jTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 658, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(jTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(468, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 280, 660));
@@ -223,6 +243,10 @@ public class UserDashboardFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jPanel5MouseClicked
 
+    private void jTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -269,6 +293,7 @@ public class UserDashboardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JTextField jTxt;
     private javax.swing.JLabel lblLogout;
     // End of variables declaration//GEN-END:variables
 }

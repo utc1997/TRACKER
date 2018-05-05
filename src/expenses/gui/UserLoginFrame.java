@@ -5,6 +5,7 @@
  */
 package expenses.gui;
 
+import static expenses.dao.UserInfoDAO.getUserInfo;
 import expenses.dao.UsersDAO;
 import expenses.pojo.GlobalData;
 import expenses.pojo.Users;
@@ -291,6 +292,8 @@ public class UserLoginFrame extends javax.swing.JFrame {
                 //UserProfile.setUsername(uname);
                 //UserProfile.setUsertype(utype);
                 GlobalData.setUsername(uname);
+                getUserInfo(uname);                 //to set user uid,name,age,gender in pojo
+                System.out.println("uname chal gaya"+uname);
                 JOptionPane.showMessageDialog(null,"Login Successful","Success!",JOptionPane.INFORMATION_MESSAGE);
                 this.dispose();
                 UserDashboardFrame userdash=new UserDashboardFrame();
