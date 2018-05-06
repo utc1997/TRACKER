@@ -17,9 +17,7 @@ public class UserInfo {
     public UserInfo(){
         
     }
-    //public UserInfo(){
-        
-    //}
+   
 
     public UserInfo(String userId, String name, String gender, int age) {
         this.userId = userId;
@@ -31,40 +29,42 @@ public class UserInfo {
     
     
 
-    public static String getUserId() {
+
+    private  String userId;
+    private  String name;
+    private  String gender;
+    private  int age;
+
+    public String getUserId() {
         return userId;
     }
 
-    public static void setUserId(String userId) {
-        UserInfo.userId = userId;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static void setName(String name) {
-        UserInfo.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static String getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public static void setGender(String gender) {
-        UserInfo.gender = gender;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public static int getAge() {
+    public int getAge() {
         return age;
     }
 
-    public static void setAge(int age) {
-        UserInfo.age = age;
+    public void setAge(int age) {
+        this.age = age;
     }
-    private static String userId;
-    private static String name;
-    private static String gender;
-    private static int age;
     
 }
