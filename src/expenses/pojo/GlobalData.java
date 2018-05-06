@@ -5,6 +5,8 @@
  */
 package expenses.pojo;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author Maraxys
@@ -58,5 +60,4 @@ public class GlobalData {
 
     
 
-    
 }
