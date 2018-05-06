@@ -310,6 +310,7 @@ public class RegistrationFrame extends javax.swing.JFrame {
                     uinfo.setName(uname);
                     uinfo.setGender(uGender);
                     uinfo.setAge(cbAge);
+                    uinfo.setBudget(budget);
                     
                 try{
                     result1=UsersDAO.userIdExists(uid);

@@ -19,13 +19,7 @@ public class UserInfo {
     }
    
 
-    public UserInfo(String userId, String name, String gender, int age) {
-        this.userId = userId;
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-        System.out.println("from const: "+this.userId+this.name+this.gender);
-    }
+   
     
     
 
@@ -34,7 +28,25 @@ public class UserInfo {
     private  String name;
     private  String gender;
     private  int age;
+    private  int budget;
 
+    public UserInfo(String userId, String name, String gender, int age, int budget) {
+        this.userId = userId;
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.budget = budget;
+    }
+
+    public int getBudget() {
+        return budget;
+    }
+
+    public void setBudget(int budget) {
+        this.budget = budget;
+    }
+    
+    
     public String getUserId() {
         return userId;
     }

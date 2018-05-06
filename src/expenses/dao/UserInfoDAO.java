@@ -50,11 +50,12 @@ public class UserInfoDAO {
      */
     public static boolean addUserInfo(UserInfo ui) throws SQLException{
         conn=DBConnExp.getConnection();
-        PreparedStatement ps=conn.prepareStatement("insert into user_info values(?,?,?,?)");
+        PreparedStatement ps=conn.prepareStatement("insert into user_info values(?,?,?,?,?)");
             ps.setString(1,ui.getUserId());
             ps.setString(2,ui.getName());
             ps.setString(3,ui.getGender());
             ps.setInt(4,ui.getAge());
+            ps.setInt(5,ui.getBudget());
         int a=ps.executeUpdate();
         if(a==0){
             return false;
@@ -81,8 +82,9 @@ public class UserInfoDAO {
             String uname = rs.getString("NAME");
             String gender = rs.getString("GENDER");
             int age = rs.getInt("AGE");
+            int budget = rs.getInt("BUDGET");
             System.out.println(uname+gender+age);
-           uinfo =new UserInfo(uid,uname,gender,age);
+           uinfo =new UserInfo(uid,uname,gender,age,budget);
             //return uinfo;
         }
     return uinfo;
