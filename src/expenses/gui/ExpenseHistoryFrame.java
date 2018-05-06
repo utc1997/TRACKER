@@ -6,8 +6,10 @@
 package expenses.gui;
 
 import expenses.dao.SelfHistoryDAO;
+import expenses.dao.UserInfoDAO;
 import expenses.pojo.GlobalData;
 import expenses.pojo.SelfHistory;
+import expenses.pojo.UserInfo;
 import java.awt.Color;
 import java.awt.Font;
 import java.sql.SQLException;
@@ -33,6 +35,7 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
     Date eDate;
     public ExpenseHistoryFrame() {
         initComponents();
+        setUname();
         super.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         
@@ -62,6 +65,13 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        Profile = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        txtAge = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtBudget = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         lblLogout = new javax.swing.JLabel();
@@ -94,15 +104,71 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(48, 48, 48));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        Profile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/user icon.png"))); // NOI18N
+        Profile.setText("jLabel1");
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("NAME");
+
+        txtName.setEditable(false);
+        txtName.setText(" ");
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
+
+        txtAge.setEditable(false);
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("AGE");
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("BUDGET");
+
+        txtBudget.setEditable(false);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 190, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(txtAge)
+                            .addComponent(txtBudget))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 28, Short.MAX_VALUE)
+                        .addComponent(Profile, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(Profile)
+                .addGap(106, 106, 106)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(46, 46, 46)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtBudget, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, 650));
@@ -425,6 +491,10 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lblLogoutMouseClicked
 
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -461,6 +531,7 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Profile;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnModify;
     private javax.swing.JLabel jLabel1;
@@ -468,6 +539,9 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -479,10 +553,13 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
     private javax.swing.JTable jtSelfExpense;
     private javax.swing.JLabel lblBack;
     private javax.swing.JLabel lblLogout;
+    private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtAmt;
+    private javax.swing.JTextField txtBudget;
     private javax.swing.JTextField txtCat;
     private javax.swing.JTextField txtDate;
     private javax.swing.JTextArea txtDesc;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 
     private void showExpenseDataInTable() {
@@ -510,4 +587,30 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "SQL Query Error in Table", "Error in Table!", JOptionPane.ERROR_MESSAGE);
         }
     }
+
+
+private void setUname() {
+        try{
+         UserInfo uinfo= UserInfoDAO.getUserInfo(GlobalData.getUsername());
+        System.out.println(uinfo.getName());
+        int age= uinfo.getAge();  
+        int budget= uinfo.getBudget();
+        String a=String.valueOf(age);
+        String b=String.valueOf(budget);
+        txtName.setText(uinfo.getName());
+        txtAge.setText(a);
+        txtBudget.setText(b);
+        
+        
+        
+        }
+        catch(SQLException ex){
+             JOptionPane.showMessageDialog(null, "name nahi dikh ra setUname mai sql ki dikkat", "Error!!", JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
+        }
+
+}
+
+
+
 }

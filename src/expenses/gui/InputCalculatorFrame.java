@@ -8,8 +8,10 @@ package expenses.gui;
 import com.sun.glass.events.KeyEvent;
 import expenses.dao.CategoriesDAO;
 import expenses.dao.SelfHistoryDAO;
+import expenses.dao.UserInfoDAO;
 import expenses.pojo.GlobalData;
 import expenses.pojo.SelfHistory;
+import expenses.pojo.UserInfo;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -41,6 +43,7 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
 
     public InputCalculatorFrame() {
         initComponents();
+        setUname();
         super.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         //btnCategory.setText(GlobalData.getCategory());
@@ -92,7 +95,13 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         lblBack = new javax.swing.JLabel();
+        Profile = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        txtAge = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtBudget = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -141,7 +150,29 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("jLabel6");
+        Profile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/user icon.png"))); // NOI18N
+        Profile.setText("jLabel1");
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("NAME");
+
+        txtName.setEditable(false);
+        txtName.setText(" ");
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
+
+        txtAge.setEditable(false);
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("AGE");
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("BUDGET");
+
+        txtBudget.setEditable(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -151,19 +182,49 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(lblBack, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(50, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(5, 5, 5)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel8))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                .addComponent(txtAge)
+                                .addComponent(txtBudget)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGap(0, 28, Short.MAX_VALUE)
+                            .addComponent(Profile, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(20, 20, 20)))
+                    .addGap(5, 5, 5)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(lblBack, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(377, Short.MAX_VALUE))
+                .addContainerGap(644, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(168, 168, 168)
+                    .addComponent(Profile)
+                    .addGap(106, 106, 106)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel6))
+                    .addGap(46, 46, 46)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7))
+                    .addGap(41, 41, 41)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtBudget, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel8))
+                    .addContainerGap(169, Short.MAX_VALUE)))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 720));
@@ -778,6 +839,10 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescActionPerformed
 
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -815,6 +880,7 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.toedter.calendar.JDateChooser DateChooser;
+    private javax.swing.JLabel Profile;
     private javax.swing.JButton btn0;
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn10;
@@ -840,13 +906,18 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblBack;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JTextField txtBudget;
     private javax.swing.JTextField txtDesc;
     private javax.swing.JTextField txtInputField;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 
     private void compute() {
@@ -918,4 +989,31 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
         }
         return ((remCat) && (addCat));
     }
+
+
+private void setUname() {
+        try{
+         UserInfo uinfo= UserInfoDAO.getUserInfo(GlobalData.getUsername());
+        System.out.println(uinfo.getName());
+        int age= uinfo.getAge();  
+        int budget= uinfo.getBudget();
+        String a=String.valueOf(age);
+        String b=String.valueOf(budget);
+        txtName.setText(uinfo.getName());
+        txtAge.setText(a);
+        txtBudget.setText(b);
+        
+        
+        
+        }
+        catch(SQLException ex){
+             JOptionPane.showMessageDialog(null, "name nahi dikh ra setUname mai sql ki dikkat", "Error!!", JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
+        }
+
+}
+
+
+
+
 }
