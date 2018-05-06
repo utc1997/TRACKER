@@ -74,8 +74,13 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         btnTxHistory = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jTxt = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        Profile = new javax.swing.JLabel();
+        txtAge = new javax.swing.JTextField();
+        txtBudget = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         lblBack = new javax.swing.JLabel();
 
@@ -164,37 +169,66 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(48, 48, 48));
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        jTxt.setText(" ");
-        jTxt.addActionListener(new java.awt.event.ActionListener() {
+        txtName.setText(" ");
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("jLabel1");
+        Profile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/user icon.png"))); // NOI18N
+        Profile.setText("jLabel1");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("NAME");
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("AGE");
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("BUDGET");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(txtAge)
+                            .addComponent(txtBudget))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 28, Short.MAX_VALUE)
+                        .addComponent(Profile, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
-                .addComponent(jTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(246, 246, 246))
+                .addGap(67, 67, 67)
+                .addComponent(Profile)
+                .addGap(106, 106, 106)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(46, 46, 46)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtBudget, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 200, 640));
@@ -262,9 +296,9 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lblLogoutMouseClicked
 
-    private void jTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtActionPerformed
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTxtActionPerformed
+    }//GEN-LAST:event_txtNameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,18 +340,23 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JInternalFrame InternalFrame;
+    private javax.swing.JLabel Profile;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnTxHistory;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JTextField jTxt;
     private javax.swing.JLabel lblBack;
     private javax.swing.JLabel lblLogout;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JTextField txtBudget;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 
     private JFreeChart create3DPieChart(PieDataset dataset) {
@@ -381,11 +420,21 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         try{
          UserInfo uinfo= UserInfoDAO.getUserInfo(GlobalData.getUsername());
         System.out.println(uinfo.getName());
-        jTxt.setText(uinfo.getName());
+        int age= uinfo.getAge();  
+        int budget= uinfo.getBudget();
+        String a=String.valueOf(age);
+        String b=String.valueOf(budget);
+        txtName.setText(uinfo.getName());
+        txtAge.setText(a);
+        txtBudget.setText(b);
+        
+        
+        
         }
         catch(SQLException ex){
              JOptionPane.showMessageDialog(null, "name nahi dikh ra setUname mai sql ki dikkat", "Error!!", JOptionPane.ERROR_MESSAGE);
             ex.printStackTrace();
         }
-    }
+
 }
+    }
