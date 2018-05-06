@@ -7,6 +7,7 @@ package expenses.gui;
 
 import expenses.pojo.GlobalData;
 import java.util.Date;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -24,6 +25,7 @@ public class CategorySelectionFrame extends javax.swing.JFrame {
     public CategorySelectionFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
     }
     
     public CategorySelectionFrame(String cTxn,String calResult,String desc,Date date) {

@@ -12,6 +12,7 @@ import expenses.dao.UsersDAO;
 import expenses.pojo.UserInfo;
 import expenses.pojo.Users;
 import java.sql.SQLException;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -30,6 +31,7 @@ public class RegistrationFrame extends javax.swing.JFrame {
     public RegistrationFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         txtLoginId.requestFocus();
     }
 

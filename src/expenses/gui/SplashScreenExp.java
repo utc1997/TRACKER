@@ -5,9 +5,7 @@
  */
 package expenses.gui;
 
-import java.awt.Image;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 /**
  *
@@ -21,6 +19,7 @@ public class SplashScreenExp extends javax.swing.JFrame {
     public SplashScreenExp() {
         initComponents();
         super.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         
       //  GIFL.setIcon(new ImageIcon(""));
         //ImageIcon icon = new ImageIcon(getClass().getResource("Untitled-1.gif"));

@@ -13,6 +13,7 @@ import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -35,6 +36,7 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
     public PersonalExpenseFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         
         UserInfo uinfo=new UserInfo();
         System.out.println(uinfo.getName());

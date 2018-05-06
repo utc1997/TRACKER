@@ -13,6 +13,7 @@ import java.awt.Font;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
@@ -33,6 +34,7 @@ public class ExpenseHistoryFrame extends javax.swing.JFrame {
     public ExpenseHistoryFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         
         jtSelfExpense.setRowSorter(new TableRowSorter(jtSelfExpense.getModel()) {
     @Override

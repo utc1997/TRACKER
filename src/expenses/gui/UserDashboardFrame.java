@@ -6,6 +6,7 @@
 package expenses.gui;
 
 import expenses.pojo.UserInfo;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,7 @@ public class UserDashboardFrame extends javax.swing.JFrame {
     public UserDashboardFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         UserInfo uinfo=new UserInfo();
         System.out.println(uinfo.getName());
         jTxt.setText(uinfo.getName());
