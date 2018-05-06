@@ -6,6 +6,7 @@
 package expenses.gui;
 
 import expenses.dao.CategoriesDAO;
+import expenses.dao.UserInfoDAO;
 import expenses.pojo.Categories;
 import expenses.pojo.GlobalData;
 import expenses.pojo.UserInfo;
@@ -35,12 +36,14 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
      */
     public PersonalExpenseFrame() {
         initComponents();
+        setUname();
+       
+        
         super.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
         
-        UserInfo uinfo=new UserInfo();
-        System.out.println(uinfo.getName());
-        jTxt.setText(uinfo.getName());
+        System.out.println("second hai apnna global ka uname"+GlobalData.getUsername());
+       
 
         try {
             catwise=CategoriesDAO.getCatwiseExpense(GlobalData.getUsername());
@@ -372,5 +375,17 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         this.pack();
         this.setVisible(true);
 
+    }
+
+    private void setUname() {
+        try{
+         UserInfo uinfo= UserInfoDAO.getUserInfo(GlobalData.getUsername());
+        System.out.println(uinfo.getName());
+        jTxt.setText(uinfo.getName());
+        }
+        catch(SQLException ex){
+             JOptionPane.showMessageDialog(null, "name nahi dikh ra setUname mai sql ki dikkat", "Error!!", JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
+        }
     }
 }

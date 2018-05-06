@@ -69,23 +69,23 @@ public class UserInfoDAO {
      * @param uname
      * @throws SQLException
      */
-    public static void getUserInfo(String uname) throws SQLException {
+    public static UserInfo getUserInfo(String uid) throws SQLException {
         conn=DBConnExp.getConnection();
-        PreparedStatement ps=conn.prepareStatement("select * from user_info where name=?");
-            ps.setString(1,uname);
+        PreparedStatement ps=conn.prepareStatement("select * from user_info where user_id=?");
+            ps.setString(1,uid);
         ResultSet rs=ps.executeQuery();
         UserInfo uinfo=null;
         if(rs.next()){
             
             
-            String UID = rs.getString("USER_ID");
+            String uname = rs.getString("NAME");
             String gender = rs.getString("GENDER");
             int age = rs.getInt("AGE");
-            System.out.println(UID+gender+age);
-           uinfo =new UserInfo(UID,uname,gender,age);
+            System.out.println(uname+gender+age);
+           uinfo =new UserInfo(uid,uname,gender,age);
             //return uinfo;
         }
-    //return uinfo;
+    return uinfo;
     }
     
     

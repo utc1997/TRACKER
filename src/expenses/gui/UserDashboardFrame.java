@@ -5,7 +5,10 @@
  */
 package expenses.gui;
 
+import expenses.dao.UserInfoDAO;
+import expenses.pojo.GlobalData;
 import expenses.pojo.UserInfo;
+import java.sql.SQLException;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -21,10 +24,9 @@ public class UserDashboardFrame extends javax.swing.JFrame {
     public UserDashboardFrame() {
         initComponents();
         super.setLocationRelativeTo(null);
+        setUname();
         this.setIconImage(new ImageIcon(getClass().getResource("icon.png")).getImage());// to add iocn to our software
-        UserInfo uinfo=new UserInfo();
-        System.out.println(uinfo.getName());
-        jTxt.setText(uinfo.getName());
+       
     }
 
     /**
@@ -110,8 +112,7 @@ public class UserDashboardFrame extends javax.swing.JFrame {
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jTxt.setEditable(false);
-        jTxt.setBackground(new java.awt.Color(0, 0, 0));
-        jTxt.setForeground(new java.awt.Color(255, 255, 255));
+        jTxt.setBackground(new java.awt.Color(255, 255, 255));
         jTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxtActionPerformed(evt);
@@ -344,4 +345,17 @@ public class UserDashboardFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTxt;
     private javax.swing.JLabel lblLogout;
     // End of variables declaration//GEN-END:variables
+
+private void setUname() {
+        try{
+         UserInfo uinfo= UserInfoDAO.getUserInfo(GlobalData.getUsername());
+        System.out.println(uinfo.getName());
+        jTxt.setText(uinfo.getName());
+        }
+        catch(SQLException ex){
+             JOptionPane.showMessageDialog(null, "name nahi dikh ra setUname mai sql ki dikkat", "Error!!", JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
+        }
+
+}
 }
