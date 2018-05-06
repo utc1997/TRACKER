@@ -45,8 +45,8 @@ public class UserDashboardFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         txtName = new javax.swing.JTextField();
         Profile = new javax.swing.JLabel();
-        txtGender = new javax.swing.JTextField();
         txtAge = new javax.swing.JTextField();
+        txtBudget = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -127,7 +127,7 @@ public class UserDashboardFrame extends javax.swing.JFrame {
 
         jLabel6.setText("NAME");
 
-        jLabel7.setText("GENDER");
+        jLabel7.setText("BUDGET");
 
         jLabel8.setText("AGE");
 
@@ -139,17 +139,17 @@ public class UserDashboardFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(Profile, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(44, Short.MAX_VALUE))
+                        .addContainerGap(45, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtAge, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
-                            .addComponent(txtGender)
+                            .addComponent(txtBudget, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                            .addComponent(txtAge)
                             .addComponent(txtName))
                         .addContainerGap())))
         );
@@ -164,12 +164,12 @@ public class UserDashboardFrame extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addGap(63, 63, 63)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addGap(61, 61, 61)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
+                .addGap(61, 61, 61)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtBudget, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
                 .addContainerGap(170, Short.MAX_VALUE))
         );
 
@@ -385,7 +385,7 @@ public class UserDashboardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JLabel lblLogout;
     private javax.swing.JTextField txtAge;
-    private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtBudget;
     private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 
@@ -393,7 +393,16 @@ private void setUname() {
         try{
          UserInfo uinfo= UserInfoDAO.getUserInfo(GlobalData.getUsername());
         System.out.println(uinfo.getName());
+        int age= uinfo.getAge();  
+        int budget= uinfo.getBudget();
+        String a=String.valueOf(age);
+        String b=String.valueOf(budget);
         txtName.setText(uinfo.getName());
+        txtAge.setText(a);
+        txtBudget.setText(b);
+        Profile.setIcon(new ImageIcon("Boy.png"));
+        
+        
         }
         catch(SQLException ex){
              JOptionPane.showMessageDialog(null, "name nahi dikh ra setUname mai sql ki dikkat", "Error!!", JOptionPane.ERROR_MESSAGE);
