@@ -154,10 +154,14 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
         Profile.setText("jLabel1");
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("NAME");
+        jLabel6.setText("NAME :-");
 
         txtName.setEditable(false);
+        txtName.setBackground(new java.awt.Color(48, 48, 48));
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtName.setForeground(new java.awt.Color(255, 255, 255));
         txtName.setText(" ");
+        txtName.setBorder(null);
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -165,14 +169,22 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
         });
 
         txtAge.setEditable(false);
+        txtAge.setBackground(new java.awt.Color(48, 48, 48));
+        txtAge.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtAge.setForeground(new java.awt.Color(255, 255, 255));
+        txtAge.setBorder(null);
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("AGE");
+        jLabel7.setText("AGE :-");
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("BUDGET");
+        jLabel8.setText("BUDGET :-");
 
         txtBudget.setEditable(false);
+        txtBudget.setBackground(new java.awt.Color(48, 48, 48));
+        txtBudget.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtBudget.setForeground(new java.awt.Color(255, 255, 255));
+        txtBudget.setBorder(null);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -224,7 +236,7 @@ public class InputCalculatorFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtBudget, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel8))
-                    .addContainerGap(169, Short.MAX_VALUE)))
+                    .addContainerGap(187, Short.MAX_VALUE)))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 720));

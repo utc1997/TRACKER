@@ -118,7 +118,10 @@ public class UserDashboardFrame extends javax.swing.JFrame {
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         txtName.setEditable(false);
-        txtName.setBackground(new java.awt.Color(255, 255, 255));
+        txtName.setBackground(new java.awt.Color(48, 48, 48));
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtName.setForeground(new java.awt.Color(255, 255, 255));
+        txtName.setBorder(null);
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -128,6 +131,18 @@ public class UserDashboardFrame extends javax.swing.JFrame {
         Profile.setForeground(new java.awt.Color(255, 255, 255));
         Profile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/user icon.png"))); // NOI18N
         Profile.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        txtAge.setEditable(false);
+        txtAge.setBackground(new java.awt.Color(48, 48, 48));
+        txtAge.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtAge.setForeground(new java.awt.Color(255, 255, 255));
+        txtAge.setBorder(null);
+
+        txtBudget.setEditable(false);
+        txtBudget.setBackground(new java.awt.Color(48, 48, 48));
+        txtBudget.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtBudget.setForeground(new java.awt.Color(255, 255, 255));
+        txtBudget.setBorder(null);
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("NAME   :-");
@@ -177,7 +192,7 @@ public class UserDashboardFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBudget, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 280, 660));

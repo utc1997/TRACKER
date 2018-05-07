@@ -171,7 +171,12 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(48, 48, 48));
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        txtName.setEditable(false);
+        txtName.setBackground(new java.awt.Color(48, 48, 48));
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtName.setForeground(new java.awt.Color(255, 255, 255));
         txtName.setText(" ");
+        txtName.setBorder(null);
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -181,17 +186,35 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
         Profile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/expenses/gui/user icon.png"))); // NOI18N
         Profile.setText("jLabel1");
 
+        txtAge.setEditable(false);
+        txtAge.setBackground(new java.awt.Color(48, 48, 48));
+        txtAge.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtAge.setForeground(new java.awt.Color(255, 255, 255));
+        txtAge.setBorder(null);
+
+        txtBudget.setEditable(false);
+        txtBudget.setBackground(new java.awt.Color(48, 48, 48));
+        txtBudget.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtBudget.setForeground(new java.awt.Color(255, 255, 255));
+        txtBudget.setBorder(null);
+
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("NAME");
+        jLabel2.setText("NAME :-");
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("AGE");
+        jLabel3.setText("AGE :-");
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("BUDGET");
+        jLabel4.setText("BUDGET :-");
+
+        txtTotal.setEditable(false);
+        txtTotal.setBackground(new java.awt.Color(48, 48, 48));
+        txtTotal.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtTotal.setForeground(new java.awt.Color(255, 255, 255));
+        txtTotal.setBorder(null);
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("EXPENSES");
+        jLabel1.setText("EXPENSES :-");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -206,17 +229,17 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
                         .addGap(30, 30, 30))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel1)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                .addComponent(txtAge)
-                                .addComponent(txtBudget)))
+                            .addComponent(txtName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtBudget, javax.swing.GroupLayout.Alignment.LEADING))
                         .addContainerGap())))
         );
         jPanel3Layout.setVerticalGroup(
@@ -240,7 +263,7 @@ public class PersonalExpenseFrame extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 200, 640));
