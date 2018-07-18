@@ -1,2 +1,2 @@
-# TRACKER
+# XPENSE TRACKER
 expense tracker
